@@ -7,7 +7,14 @@ export class NewsItem extends Component {
     return (
       <div>
         <div className="card">
-        <span class="position-absolute top-0 translate-middle badge rounded-pill bg-success" style={{left :'80%',zIndex:'1'}}>{source}</span>
+          <div style={{
+            display:"flex",
+            justifyContent:"flex-end",
+            position:'absolute',
+            right:'0'
+          }}>
+        <span className=" badge rounded-pill bg-success" >{source}</span>
+        </div>
           <img src={!imageurl?"https://ichef.bbci.co.uk/news/1024/branded_news/a49c/live/0136d750-dcb4-11ef-bb39-7b9a8de7bf71.jpg":imageurl}
           className="card-img-top" alt="..."/>
           <div className="card-body">
